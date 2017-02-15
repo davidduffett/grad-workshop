@@ -43,14 +43,24 @@ PUT jobs-{your surname}
                   "index": "analyzed"
                 },
                 "advertiser": {
-                  "type": "nested",
                   "properties": {
-                    "id": { "type": "integer" },
-                    "name": { "type": "text" }                    
+                    "id": {
+                      "type": "long"
+                    },
+                    "name": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    }
                   }
                 },
                 "publishedDate": {
-                  "type" : "date"
+                  "type" : "date",
+                  "format": "date"
                 }
             }
         }
