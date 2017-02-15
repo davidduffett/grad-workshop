@@ -119,7 +119,7 @@ PUT /jobs-{your surname}/job/4
   "title": "agile product manager",
   "description": "needs a product manager with agile experience",
   "advertiser": {
-    "name": "seek ltd",
+    "name": "abc recruitment",
     "id": 1
   },
   "publishedDate": "2017-02-15"
@@ -132,8 +132,21 @@ PUT /jobs-{your surname}/job/5
   "title": "delivery manager",
   "description": "needs a delivery manager with agile experience, good sense of humour is a must",
   "advertiser": {
-    "name": "seek ltd",
+    "name": "talent solutions",
     "id": 2
+  },
+  "publishedDate": "2017-02-15"
+}
+```
+
+```
+PUT /jobs-{your surname}/job/6
+{
+  "title": "senior developer",
+  "description": "java, go, javascript, html",
+  "advertiser": {
+    "name": "abc recruitment",
+    "id": 1
   },
   "publishedDate": "2017-02-15"
 }
