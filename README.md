@@ -126,6 +126,19 @@ PUT /jobs-{your surname}/job/4
 }
 ```
 
+```
+PUT /jobs-{your surname}/job/5
+{
+  "title": "delivery manager",
+  "description": "needs a delivery manager with agile experience, good sense of humour is a must",
+  "advertiser": {
+    "name": "seek ltd",
+    "id": 1
+  },
+  "publishedDate": "2017-02-15"
+}
+```
+
 
 ### Search
 
@@ -137,6 +150,14 @@ Find a job by id
 GET /jobs-niv/job/3
 ```
 
-Find jobs that has certain keywords
+Find all manager jobs
 
+```
+GET /jobs-niv/job/_search?q=manager
+```
+
+Find only the product manager jobs
+
+```
+GET /jobs-niv/job/_search?q=product AND manager
 ```
