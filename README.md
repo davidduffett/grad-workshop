@@ -20,10 +20,10 @@ In order to perform searches, your documents needs to be in an Elasticsearch ind
 
 Go to Elasticsearch URL and click on "Dev Tools". This will take you to "Console" which is an interactive tool that you can use to run commands against Elasticsearch. 
 
-Copy paste the follwong snippet into Console. Make sure to replace the highlighted text with your surname so that you won't overwrite each others work :-).  And then click the Play button (Green button).
+Copy paste the follwong snippet into Console. Make sure to replace the text ```{your surname}``` with your surname so that you won't overwrite each others work :-).  And then click the Play button (Green button).
 
 ```
-PUT jobs-<b>your surname</b>
+PUT jobs-{your surname}
 {
     "settings" : {
         "index" : {
