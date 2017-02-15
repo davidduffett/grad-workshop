@@ -160,7 +160,7 @@ Since you have indexed some jobs, you could perform searches and get results/ins
 Find a job by id
 
 ```
-GET /jobs-{your surname}/3
+GET /jobs-{your surname}/job/3
 ```
 
 Find all jobs that contains `manager` in `title`
