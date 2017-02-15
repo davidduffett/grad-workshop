@@ -231,3 +231,5 @@ GET /jobs-{your surname}/job/_search
   }
 }
 ```
+
+To learn more about querying refer to [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/full-text-queries.html).
