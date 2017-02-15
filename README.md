@@ -192,3 +192,27 @@ GET /jobs-niv/job/_search
 }
 
 ```
+
+Find jobs that are from advertiser with id 1 and contains the word `manager`
+
+```
+GET /jobs-niv/job/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "title": "manager"
+          }
+        },
+        {
+          "term": {
+            "advertiser.id": 1
+          }
+        }
+      ]
+    }
+  }
+}
+```
