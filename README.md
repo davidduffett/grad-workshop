@@ -160,13 +160,13 @@ Since you have indexed some jobs, you could perform searches and get results/ins
 Find a job by id
 
 ```
-GET /jobs-niv/job/3
+GET /jobs-{your surname}/job/3
 ```
 
 Find all jobs that contains `manager` in `title`
 
 ```
-GET /jobs-niv/job/_search
+GET /jobs-{your surname}/job/_search
 {
   "query": {
       "match" : {
@@ -179,7 +179,7 @@ GET /jobs-niv/job/_search
 Find jobs that contain words `product` and `manager`
 
 ```
-GET /jobs-niv/job/_search
+GET /jobs-{your surname}/job/_search
 {
   "query": {
       "match" : {
@@ -196,7 +196,7 @@ GET /jobs-niv/job/_search
 Find jobs that are from advertiser with id 1 and contains the word `manager`
 
 ```
-GET /jobs-niv/job/_search
+GET /jobs-{your surname}/job/_search
 {
   "query": {
     "bool": {
@@ -213,6 +213,21 @@ GET /jobs-niv/job/_search
         }
       ]
     }
+  }
+}
+```
+
+Find all jobs published after 14th of Feb 2017
+
+```
+GET /jobs-{your surname}/job/_search
+{
+  "query": {
+      "range" : {
+          "publishedDate" : {
+              "gte": "2017-02-14"
+          }
+      }
   }
 }
 ```
