@@ -46,7 +46,6 @@ PUT jobs-{your surname}
                   "type" : "text",
                   "index" : "analyzed"
                 },
-                ,
                 "advertiser": {
                   "type" : "text",
                   "index" : "analyzed"
