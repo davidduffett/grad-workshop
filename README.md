@@ -23,7 +23,7 @@ Go to Elasticsearch URL and click on "Dev Tools". This will take you to "Console
 Copy paste the follwong snippet into Console. Make sure to replace the highlighted text with your surname so that you won't overwrite each others work :-).  And then click the Play button (Green button).
 
 ```
-PUT jobs-<span style="background-color: #FFFF00">{your surname}</span>
+PUT jobs-<b>{your surname}</b>
 {
     "settings" : {
         "index" : {
