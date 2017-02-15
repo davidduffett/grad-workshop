@@ -70,7 +70,7 @@ PUT jobs-{your surname}
 
 The above snippet will create an index named '''jobs'''. We can now start indexing documents. If you want to learn more about creating indexes refer to [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html).
 
-### Insert documents
+### Index documents
 
 Copy paste the following snippets to Console and run them one by one, feel free to change text if you like. Make sure to replace ```{your name}``` with your surname.
 
@@ -112,3 +112,22 @@ PUT /jobs-{your surname}/job/3
   "publishedDate": "2017-02-11"
 }
 ```
+
+```
+PUT /jobs-{your surname}/job/4
+{
+  "title": "agile product manager",
+  "description": "needs a product manager with agile experience",
+  "advertiser": {
+    "name": "seek ltd",
+    "id": 1
+  },
+  "publishedDate": "2017-02-15"
+}
+```
+
+
+### Search
+
+Since you have indexed some jobs, you could perform searches and get results/insights.
+
