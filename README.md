@@ -34,10 +34,6 @@ PUT jobs-{your surname}
     "mappings": {
         "job": {
             "properties": {
-                "id": { 
-                  "type": "integer",
-                  "index": "not_analyzed"
-                },
                 "title": {
                   "type": "text",
                   "index": "analyzed"
@@ -65,4 +61,10 @@ PUT jobs-{your surname}
 The above snippet will create an index named '''jobs'''. We can now start indexing documents. If you want to learn more about creating indexes refer to [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html).
 
 ### Insert documents
+
+Copy paste the following snippet to Console, feel free to change text if you like.
+
+```
+
+```
 
