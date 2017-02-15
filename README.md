@@ -94,7 +94,7 @@ PUT /jobs-{your surname}/job/2
   "description": "analyse business, agile, scrum",
   "advertiser": {
     "name": "talent solutions",
-    "id": 1
+    "id": 2
   },
   "publishedDate": "2017-02-13"
 }
@@ -107,7 +107,7 @@ PUT /jobs-{your surname}/job/3
   "description": "test software, report bugs",
   "advertiser": {
     "name": "commonwealth bank",
-    "id": 1
+    "id": 3
   },
   "publishedDate": "2017-02-11"
 }
@@ -133,7 +133,7 @@ PUT /jobs-{your surname}/job/5
   "description": "needs a delivery manager with agile experience, good sense of humour is a must",
   "advertiser": {
     "name": "seek ltd",
-    "id": 1
+    "id": 2
   },
   "publishedDate": "2017-02-15"
 }
@@ -150,14 +150,32 @@ Find a job by id
 GET /jobs-niv/job/3
 ```
 
-Find all manager jobs
+Find all jobs that contains `manager` in `title`
 
 ```
-GET /jobs-niv/job/_search?q=manager
+GET /jobs-niv/job/_search
+{
+  "query": {
+      "match" : {
+          "title" : "manager"
+      }
+  }
+}
 ```
 
-Find only the product manager jobs
+Find jobs that contain words `product` and `manager`
 
 ```
-GET /jobs-niv/job/_search?q=product AND manager
+GET /jobs-niv/job/_search
+{
+  "query": {
+      "match" : {
+          "title" : {
+            "query": "product manager",
+            "operator": "and"
+          }
+      }
+  }
+}
+
 ```
