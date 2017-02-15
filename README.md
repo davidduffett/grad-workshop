@@ -72,9 +72,43 @@ The above snippet will create an index named '''jobs'''. We can now start indexi
 
 ### Insert documents
 
-Copy paste the following snippet to Console, feel free to change text if you like.
+Copy paste the following snippets to Console and run them one by one, feel free to change text if you like. Make sure to replace ```{your name}``` with your surname.
 
+```
+PUT /jobs-{your surname}/job/1
+{
+  "title": "product manager",
+  "description": "lets build awesome products",
+  "advertiser": {
+    "name": "abc recruitment",
+    "id": 1
+  },
+  "publishedDate": "2017-02-15"
+}
 ```
 
 ```
+PUT /jobs-{your surname}/job/2
+{
+  "title": "business analyst",
+  "description": "analyse business, agile, scrum",
+  "advertiser": {
+    "name": "talent solutions",
+    "id": 1
+  },
+  "publishedDate": "2017-02-13"
+}
+```
 
+```
+PUT /jobs-{your surname}/job/3
+{
+  "title": "agile tester",
+  "description": "test software, report bugs",
+  "advertiser": {
+    "name": "commonwealth bank",
+    "id": 1
+  },
+  "publishedDate": "2017-02-11"
+}
+```
