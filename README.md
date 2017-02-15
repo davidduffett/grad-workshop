@@ -6,7 +6,7 @@ For convenience we have setup an Elasticsearch cluster for you to play with. But
 * [Elasticsearch: The Definitive Guide] (https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html)
 * [Kibana: Analytics/Visualization Tool] (https://www.elastic.co/products/kibana)
 
-## Exerices
+## Exercises
 
 ### Create the Index
 
@@ -179,18 +179,13 @@ GET /jobs-{your surname}/_search
 Find jobs that contain words `product` and `manager`
 
 ```
-GET /jobs-{your surname}/_search
-{
-  "query": {
-      "match" : {
-          "title" : {
-            "query": "product manager",
-            "operator": "and"
-          }
-      }
-  }
-}
+GET /jobs-{your surname}/_search?q=product+AND+manager
+```
 
+Find jobs that contain `product` OR `manager`
+
+```
+GET /jobs-{your surname}/_search?q=product+OR+manager
 ```
 
 Find jobs that are from advertiser with id 1 and contains the word `manager`
