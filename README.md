@@ -25,30 +25,33 @@ Copy paste the follwong snippet into Console. Make sure to replace the text ```{
 ```
 PUT jobs-{your surname}
 {
-    "settings" : {
-        "index" : {
-            "number_of_shards" : 3, 
-            "number_of_replicas" : 2 
+    "settings": {
+        "index": {
+            "number_of_shards": 3, 
+            "number_of_replicas": 2 
         }
     },
-    "mappings" : {
-        "job" : {
-            "properties" : {
+    "mappings": {
+        "job": {
+            "properties": {
                 "id": { 
-                  "type" : "integer",
+                  "type": "integer",
                   "index": "not_analyzed"
                 },
                 "title": {
-                  "type" : "text",
-                  "index" : "analyzed"
+                  "type": "text",
+                  "index": "analyzed"
                 },
                 "description": {
-                  "type" : "text",
-                  "index" : "analyzed"
+                  "type": "text",
+                  "index": "analyzed"
                 },
                 "advertiser": {
-                  "type" : "text",
-                  "index" : "analyzed"
+                  "type": "nested",
+                  "properties": {
+                    "id": { "type": "integer" },
+                    "name": { "type": "text" }                    
+                  }
                 },
                 "publishedDate": {
                   "type" : "date"
