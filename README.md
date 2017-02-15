@@ -59,7 +59,7 @@ PUT jobs-{your surname}
 }
 ```
 
-The above snippet will create an index named '''jobs'''. We can now start indexing documents.
+The above snippet will create an index named '''jobs'''. We can now start indexing documents. If you want to learn more about creating indexes refer to [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html).
 
 ### Insert documents
 
