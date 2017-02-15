@@ -41,8 +41,26 @@ PUT jobs-{your surname}
                 "title": {
                   "type" : "text",
                   "index" : "analyzed"
+                },
+                "description": {
+                  "type" : "text",
+                  "index" : "analyzed"
+                },
+                ,
+                "advertiser": {
+                  "type" : "text",
+                  "index" : "analyzed"
+                },
+                "publishedDate": {
+                  "type" : "date"
                 }
             }
         }
     }
 }
+```
+
+The above snippet will create an index named '''jobs'''. We can now start indexing documents.
+
+### Insert documents
+
