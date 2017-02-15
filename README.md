@@ -131,3 +131,12 @@ PUT /jobs-{your surname}/job/4
 
 Since you have indexed some jobs, you could perform searches and get results/insights.
 
+Find a job by id
+
+```
+GET /jobs-niv/job/3
+```
+
+Find jobs that has certain keywords
+
+```
